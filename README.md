@@ -1,6 +1,8 @@
-# Funkin Editor
+# Funkin Editor Plus
 
 * Heavily stripped psych engine but mainly used as a chart and modchart editor.
+
+* Source Only (Sorry mods folder users.)
 
 # How to build
 
@@ -10,7 +12,7 @@
 
 # Creds
 
-* TyDev - Funkin Editor, and FNF Mod Charting Tools FX
+* TyDev - Funkin Editor Plus, and FNF Mod Charting Tools FX
 
 * TheZoroForce240 - The original FNF Mod Charting Tools
 
