@@ -4,6 +4,10 @@
 
 * Source Only (Sorry mods folder users.)
 
+# WARNING
+
+* This is mainly to be used with FX Engine (once the 2.0 update comes out).
+
 # How to build
 
 * Install the shit needed for psych.
@@ -17,3 +21,5 @@
 * TheZoroForce240 - The original FNF Mod Charting Tools
 
 * Shadow Mario and Psych Contributers - Psych Engine
+
+* Funkin' Crew - Original Game
