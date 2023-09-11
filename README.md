@@ -15,8 +15,9 @@
 * Run "lime build windows".
 
 # Creds
+* BlitzEX - Owner of Funkin' Editor Plus and FNF Mod Charting Tools FX
 
-* TyDev - Funkin Editor Plus, and FNF Mod Charting Tools FX
+* TyDev - Original Owner of Funkin Editor Plus, and FNF Mod Charting Tools FX
 
 * TheZoroForce240 - The original FNF Mod Charting Tools
 
