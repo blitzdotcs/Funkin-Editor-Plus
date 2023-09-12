@@ -10,9 +10,9 @@
 
 # How to build
 
-* Install the shit needed for psych.
+* Install the tools needed for haxe and psych.
 
-* Run "lime build windows".
+* Run "lime build windows" if you're on windows, "lime build linux" if you're on a linux distro, and "lime build mac" if on macos.
 
 # Creds
 * BlitzEX - Owner of Funkin' Editor Plus and FNF Mod Charting Tools FX
