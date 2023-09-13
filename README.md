@@ -2,7 +2,7 @@
 
 * Heavily stripped psych engine but mainly used as a chart and modchart editor.
 
-* Source Only (Sorry mods folder users.)
+* Mod Folders Supported!
 
 # WARNING
 
