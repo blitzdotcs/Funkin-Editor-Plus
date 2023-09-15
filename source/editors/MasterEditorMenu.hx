@@ -111,10 +111,6 @@ class MasterEditorMenu extends MusicBeatState
 			changeDirectory(1);
 		}
 		#end
-		if (controls.BACK)
-		{
-			MusicBeatState.switchState(new TitleState());
-		}
 
 		if (controls.ACCEPT)
 		{

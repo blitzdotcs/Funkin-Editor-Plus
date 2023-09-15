@@ -17,6 +17,8 @@
 # Creds
 * BlitzEX - Owner of Funkin' Editor Plus and FNF Mod Charting Tools FX
 
+* Beta Testers - Beta Testing this tool lmao
+
 * TyDev - Original Owner of Funkin Editor Plus, and FNF Mod Charting Tools FX
 
 * TheZoroForce240 - The original FNF Mod Charting Tools
