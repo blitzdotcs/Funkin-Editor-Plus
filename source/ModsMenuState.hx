@@ -482,7 +482,6 @@ class ModsMenuState extends MusicBeatState
 			saveTxt();
 			if(needaReset)
 			{
-				//MusicBeatState.switchState(new TitleState());
 				TitleState.initialized = false;
 				TitleState.closedState = false;
 				FlxG.sound.music.fadeOut(0.3);
@@ -495,7 +494,7 @@ class ModsMenuState extends MusicBeatState
 			}
 			else
 			{
-				MusicBeatState.switchState(new MainMenuState());
+				MusicBeatState.switchState(new editors.MasterEditorMenu());
 			}
 		}
 
