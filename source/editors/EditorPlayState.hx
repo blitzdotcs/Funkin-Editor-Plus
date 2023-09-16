@@ -1,5 +1,8 @@
 package editors;
 
+#if desktop
+import Discord.DiscordClient;
+#end
 import Section.SwagSection;
 import Song.SwagSong;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -27,6 +30,9 @@ class EditorPlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
+	// What da fuck
+	var _song:SwagSong;
+
 	// Yes, this is mostly a copy of PlayState, it's kinda dumb to make a direct copy of it but... ehhh
 	private var strumLine:FlxSprite;
 	private var comboGroup:FlxTypedGroup<FlxSprite>;
@@ -43,6 +49,13 @@ class EditorPlayState extends MusicBeatState
 
 	var startOffset:Float = 0;
 	var startPos:Float = 0;
+
+	#if desktop
+	// Discord RPC variables
+	var storyDifficultyText:String = "";
+	var detailsText:String = "";
+	var detailsPausedText:String = "";
+	#end
 
 	public function new(startPos:Float) {
 		this.startPos = startPos;
@@ -74,6 +87,30 @@ class EditorPlayState extends MusicBeatState
 	override function create()
 	{
 		instance = this;
+
+		if (PlayState.SONG != null)
+			_song = PlayState.SONG;
+		else
+		{
+			CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
+
+			_song = {
+				song: 'Tutorial',
+				notes: [],
+				events: [],
+				bpm: 150.0,
+				needsVoices: true,
+				arrowSkin: '',
+				splashSkin: 'noteSplashes',//idk it would crash if i didn't
+				player1: 'bf',
+				player2: 'dad',
+				gfVersion: 'gf',
+				speed: 1,
+				stage: 'stage',
+				validScore: false
+			};
+			PlayState.SONG = _song;
+		}
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.scrollFactor.set();
@@ -195,6 +232,11 @@ class EditorPlayState extends MusicBeatState
 		tipText.scrollFactor.set();
 		add(tipText);
 		FlxG.mouse.visible = false;
+
+		#if desktop
+		// Updating Discord Rich Presence.
+		DiscordClient.changePresence("Testing a chart", StringTools.replace(_song.song, '-', ' '));
+		#end
 
 		//sayGo();
 		if(!ClientPrefs.controllerMode)
@@ -346,7 +388,7 @@ class EditorPlayState extends MusicBeatState
 		FlxG.sound.music.volume = 1;
 		vocals.volume = 1;
 		vocals.time = startPos;
-		vocals.play();
+		vocals.play();	
 	}
 
 	function sortByShit(Obj1:Note, Obj2:Note):Int
